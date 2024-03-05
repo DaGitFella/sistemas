@@ -6,7 +6,7 @@
       {% for msg in messages%}
         <div class="toast position-absolute bottom-0 end-0 show" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header bg-danger-subtle">
-            <i class="bi bi-box-arrow-left text-black me-2"></i>
+            <i class="bi bi-box-arrow-left text-black fs-bold me-2"></i>
               <strong class="me-auto text-black">David's website</strong>
               <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
@@ -17,35 +17,35 @@
       {% endfor %}
     {% endif %}
 {% endwith %}
-<div class="container">
-  <form action="#" method="post" class="mt-5">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="nm" />
+
+<form action="#" method="post" class="mt-5">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="nm" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      name="mail"
+      value="{{email if email}}"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
     </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input
-        type="email"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-        name="mail"
-      />
-      <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
-      </div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input
-        type="password"
-        class="form-control"
-        id="exampleInputPassword1"
-        name="password"
-      />
-    </div>
-    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      name="password"
+    />
+  </div>
+  <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}
