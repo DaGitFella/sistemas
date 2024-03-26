@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get and Post</title>
+  </head>
+  <body>
+    <form action="recebedados" method="post">
+      <label for="nome">nome:</label>
+      <input type="text" name="nome" id="nome" /> <br />
+      <label for="email">email:</label>
+      <input type="email" name="email" id="email" /> <br />
+      <select name="estado" id="estado">
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="PB">Paraíba</option>
+        <option value="PE">Pernambuco</option>
+        <option value="CE">Ceará</option>
+      </select>
+      <button type="submit">enviar</button>
+    </form>
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
